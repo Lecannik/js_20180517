@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Block; });\nclass Block {\n\n    get name() {\n        throw new Error('Invalid component name');\n    }\n\n    constructor() {\n        this.el = document.createElement(this.name);\n    }\n\n    /**\n     * Вставка элемента на старинцу\n     * @param {Element} root - родительский элемент\n     */\n    append(root) {\n        root.appendChild(this.el);\n    }\n}\n\n\n\n//# sourceURL=webpack:///./blocks/block.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Block; });\nclass Block {\r\n\r\n    get name() {\r\n        throw new Error('Invalid component name');\r\n    }\r\n\r\n    constructor() {\r\n        this.el = document.createElement(this.name);\r\n    }\r\n\r\n    /**\r\n     * Вставка элемента на старинцу\r\n     * @param {Element} root - родительский элемент\r\n     */\r\n    append(root) {\r\n        root.appendChild(this.el);\r\n    }\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./blocks/block.js?");
 
 /***/ }),
 
@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Button; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass Button extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name() {\n        return 'button';\n    }\n\n    /**\n     * Кнопка\n     * @param {Object} obj\n     * @param {string} obj.text - текст кнопки\n     * @param {string} [obj.type]\n     */\n    constructor({ text, type = 'button' }) {\n        super();\n\n        this.el.textContent = text;\n        this.el.classList.toggle('button');\n        this.el.type = type;\n    }\n}\n\n\n\n//# sourceURL=webpack:///./blocks/button/button.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Button; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\r\n\r\nclass Button extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\r\n    get name() {\r\n        return 'button';\r\n    }\r\n\r\n    /**\r\n     * Кнопка\r\n     * @param {Object} obj\r\n     * @param {string} obj.text - текст кнопки\r\n     * @param {string} [obj.type]\r\n     */\r\n    constructor({ text, type = 'button' }) {\r\n        super();\r\n\r\n        this.el.textContent = text;\r\n        this.el.classList.toggle('button');\r\n        this.el.type = type;\r\n    }\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./blocks/button/button.js?");
 
 /***/ }),
 
@@ -118,7 +118,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Input; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\n\nclass Input extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\n\n    get name () {\n        return 'input';\n    }\n\n    /**\n     * Input\n     * @param {Object} obj\n     * @param {string} obj.placeholder - текст кнопки,\n     * @param {string} [obj.type] - тип инпута (по умолчанию text)\n     */\n    constructor({ placeholder, type = 'text', value='' }) {\n        super();\n\n        this.el.classList.toggle('input', true);\n        this.el.type  = type;\n        this.el.placeholder = placeholder;\n        this.el.value = value;\n    }\n\n}\n\n\n\n//# sourceURL=webpack:///./blocks/input/input.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Input; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\r\n\r\nclass Input extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\r\n    get name () {\r\n        return 'input';\r\n    }\r\n\r\n    /**\r\n     * Input\r\n     * @param {Object} obj\r\n     * @param {string} obj.placeholder - текст кнопки,\r\n     * @param {string} [obj.type] - тип инпута (по умолчанию text)\r\n     */\r\n    constructor({ placeholder, type = 'text', value='' }) {\r\n        super();\r\n\r\n        this.el.classList.toggle('input', true);\r\n        this.el.type  = type;\r\n        this.el.placeholder = placeholder;\r\n        this.el.value = value;\r\n    }\r\n\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./blocks/input/input.js?");
+
+/***/ }),
+
+/***/ "./blocks/list/list.js":
+/*!*****************************!*\
+  !*** ./blocks/list/list.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return List; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\r\n\r\nclass List extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\r\n    get name () {\r\n        return 'list';\r\n    }\r\n\r\n    /**\r\n     * textarea\r\n     * @param {Object} obj\r\n     * @param {string} obj.usersOnlile - объект списка пользователей,\r\n\r\n     */\r\n    constructor({ usersOnlile }) {\r\n        super();\r\n\r\n        console.log({usersOnlile});\r\n\r\n        let list = '';\r\n        for(let li of usersOnlile){\r\n            list += '<li>Пользователю '+ li +' онлайн .</li>'\r\n        }\r\n\r\n\r\n        this.el.innerHeight = list;\r\n\r\n        this.el.classList.toggle('list', true);\r\n\r\n    }\r\n\r\n}\n\n//# sourceURL=webpack:///./blocks/list/list.js?");
+
+/***/ }),
+
+/***/ "./blocks/textarea/textarea.js":
+/*!*************************************!*\
+  !*** ./blocks/textarea/textarea.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Textarea; });\n/* harmony import */ var _block__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../block */ \"./blocks/block.js\");\n\r\n\r\nclass Textarea extends _block__WEBPACK_IMPORTED_MODULE_0__[\"default\"] {\r\n\r\n    get name () {\r\n        return 'textarea';\r\n    }\r\n\r\n    /**\r\n     * textarea\r\n     * @param {Object} obj\r\n     * @param {string} obj.placeholder - текст кнопки,\r\n\r\n     */\r\n    constructor({ placeholder }) {\r\n        super();\r\n\r\n        this.el.classList.toggle('textarea', true);\r\n\r\n        this.el.placeholder = placeholder;\r\n\r\n    }\r\n\r\n}\r\n\r\n\n\n//# sourceURL=webpack:///./blocks/textarea/textarea.js?");
 
 /***/ }),
 
@@ -130,7 +154,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/button */ \"./blocks/button/button.js\");\n/* harmony import */ var _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/input/input */ \"./blocks/input/input.js\");\n\n\n\nwindow.addEventListener('DOMContentLoaded', function () {\n\n    let button = new _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n        text: 'Тестовая кнопка'\n    });\n\n    let input = new _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\n        placeholder: 'Тестовый инпут'\n    });\n\n    button.append(document.body);\n    input.append(document.body);\n});\n\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blocks/button/button */ \"./blocks/button/button.js\");\n/* harmony import */ var _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blocks/input/input */ \"./blocks/input/input.js\");\n/* harmony import */ var _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./blocks/textarea/textarea */ \"./blocks/textarea/textarea.js\");\n/* harmony import */ var _blocks_list_list__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./blocks/list/list */ \"./blocks/list/list.js\");\n\r\n\r\n\r\n\r\n\r\nwindow.addEventListener('DOMContentLoaded', function () {\r\n\r\n    let usersOnlile = [1,23,4, '434'];\r\n\r\n\r\n    let button = new _blocks_button_button__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\r\n        text: 'Тестовая кнопка'\r\n    });\r\n\r\n    let input = new _blocks_input_input__WEBPACK_IMPORTED_MODULE_1__[\"default\"]({\r\n        placeholder: 'Тестовый инпут'\r\n    });\r\n\r\n    let textarea = new _blocks_textarea_textarea__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\r\n        placeholder : \"test\"\r\n    });\r\n\r\n    let list= {};\r\n    list = new _blocks_list_list__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({usersOnlile});\r\n\r\n    button.append(document.body);\r\n    input.append(document.body);\r\n    textarea.append(document.body);\r\n    list.append(document.body);\r\n});\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ })
 

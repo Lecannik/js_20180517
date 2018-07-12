@@ -1,5 +1,6 @@
 import Button from './blocks/button/button';
 import Input from './blocks/input/input';
+import Textarea from "./blocks/textarea/textarea";
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -11,8 +12,13 @@ window.addEventListener('DOMContentLoaded', function () {
         placeholder: 'Тестовый инпут'
     });
 
+    let textarea = new Textarea({
+        placeholder : "test"
+    });
+
     button.append(document.body);
     input.append(document.body);
+    textarea.append(document.body);
 });
 
 

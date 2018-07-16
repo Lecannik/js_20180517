@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/burlakilia/js_20180517.git"
+    "url": "git+https://github.com/Lecannik/js_20180517.git"
   },
-  "author": "Burlak Ilia",
+  "author": "Nikita Chmil",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/burlakilia/js_20180517/issues"
+    "url": "https://github.com/Lecannik/js_20180517/issues"
   },
-  "homepage": "https://github.com/burlakilia/js_20180517#readme",
+  "homepage": "https://github.com/Lecannik/js_20180517#readme",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",

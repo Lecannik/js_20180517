@@ -3,30 +3,21 @@ import Block from '../block';
 export default class List extends Block {
 
     get name () {
-        return 'list';
+        return 'ul';
     }
 
     /**
-     * textarea
+     * Input
      * @param {Object} obj
-     * @param {string} obj.usersOnlile - объект списка пользователей,
-
+     * @param {string} obj.list - массив с элементами списка
      */
-    constructor({ usersOnlile }) {
+    constructor({ list }) {
         super();
 
-        console.log({usersOnlile});
-
-        let list = '';
-        for(let li of usersOnlile){
-            list += '<li>Пользователю '+ li +' онлайн .</li>'
-        }
-
-
-        this.el.innerHeight = list;
-
         this.el.classList.toggle('list', true);
-
+        this.el.innerHTML = list.map(item => {
+            return `<li class='list__item'>${item}</li>`
+        }).join('');
     }
 
 }

@@ -1,0 +1,14 @@
+.textarea {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    transition: border-color .35s ease-in-out;
+    font-size: 14px;
+
+    &:focus {
+        border-color: #129FEA;
+    }
+}

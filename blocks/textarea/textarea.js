@@ -7,19 +7,15 @@ export default class Textarea extends Block {
     }
 
     /**
-     * textarea
+     * Input
      * @param {Object} obj
-     * @param {string} obj.placeholder - текст кнопки,
-
+     * @param {string} bj.placeholder - текст поля
      */
     constructor({ placeholder }) {
         super();
 
         this.el.classList.toggle('textarea', true);
-
         this.el.placeholder = placeholder;
-
     }
 
 }
-

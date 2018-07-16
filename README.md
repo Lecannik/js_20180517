@@ -6,5 +6,24 @@
 
 ```
     npm install
-    ./node_modules/.bin/static-server ./
+
+```
+
+## Build ##
+
+```
+    npm build
+
+```
+## Build and watch files ##
+
+```
+    npm dev
+
+```
+## Run static server ##
+
+```
+    npm start
+
 ```

@@ -1,31 +1,24 @@
 import Block from '../block';
+import template from './message.pug';
 
-export default class Messages extends Block {
+export default class Message extends Block {
 
     get name () {
-        return 'messages';
+        return 'p';
     }
 
     /**
-     * textarea
+     * Input
      * @param {Object} obj
-     * @param {string} obj.usersOnlile - объект списка пользователей,
-
+     * @param {string} obj.message - текст сообщения
      */
-    constructor({ usersOnlile }) {
+    constructor({ message }) {
         super();
 
-
-        let list = '';
-        for(let li of usersOnlile){
-            list += '<li>`${li}`</li>'
-        }
-
-
-        this.el.innerHeight = list;
-
-        this.el.classList.toggle('messages', true);
-
+        this.el.classList.toggle('message', true);
+        this.el.innerHTML = template({
+            text: message
+        });
     }
 
 }

@@ -12,12 +12,14 @@ export default class Button extends Block {
      * @param {string} obj.text - текст кнопки
      * @param {string} [obj.type]
      */
-    constructor({ text, type = 'button' }) {
+    constructor({ text, type }) {
         super();
 
         this.el.textContent = text;
         this.el.classList.toggle('button');
-        this.el.type = type;
+        if (type) {
+            this.el.type = type;
+        }
+
     }
 }
-

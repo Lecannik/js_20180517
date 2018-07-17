@@ -1,4 +1,5 @@
 import Block from '../block';
+import ListStyle from '../list/list';
 
 export default class List extends Block {
 

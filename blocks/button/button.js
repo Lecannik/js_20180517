@@ -1,4 +1,5 @@
 import Block from '../block';
+import ButtonStyle from '../button/button.scss';
 
 export default class Button extends Block {
 
@@ -9,7 +10,7 @@ export default class Button extends Block {
     /**
      * Кнопка
      * @param {Object} obj
-     * @param {string} obj.text - текст кнопки
+     * @param {string} obj.text - текст кнопки компонента
      * @param {string} [obj.type]
      */
     constructor({ text, type }) {

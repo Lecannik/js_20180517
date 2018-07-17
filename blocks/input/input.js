@@ -1,4 +1,5 @@
 import Block from '../block';
+import inputStyle from '../input/input.scss';
 
 export default class Input extends Block {
 

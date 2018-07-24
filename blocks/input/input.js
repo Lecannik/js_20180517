@@ -1,10 +1,11 @@
 import Block from '../block';
-import inputStyle from '../input/input.scss';
+import template from './input.pug';
+import style from './input.scss';
 
 export default class Input extends Block {
 
     get name () {
-        return 'input';
+        return 'div';
     }
 
     /**
@@ -17,9 +18,27 @@ export default class Input extends Block {
         super();
 
         this.el.classList.toggle('input', true);
-        this.el.type  = type;
-        this.el.placeholder = placeholder;
-        this.el.value = value;
+
+        this.el.innerHTML = template({
+            placeholder: placeholder,
+            value: value,
+            type: type
+        });
+
+        // TODO поправить по БЭМ
+        this.input = this.el.querySelector('input');
+        this.input.addEventListener('input', event => this.onInput(event));
+    }
+
+    /**
+     * @override
+     */
+    onInput(event) {
+
+    }
+
+    getValue() {
+        return this.input.value;
     }
 
 }

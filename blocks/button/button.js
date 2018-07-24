@@ -1,26 +1,30 @@
 import Block from '../block';
-import ButtonStyle from '../button/button.scss';
+import style from './button.scss';
+import template from './button.pug';
 
 export default class Button extends Block {
 
     get name() {
-        return 'button';
+        return 'div';
     }
 
     /**
      * Кнопка
      * @param {Object} obj
-     * @param {string} obj.text - текст кнопки компонента
+     * @param {string} obj.text - текст кнопки
      * @param {string} [obj.type]
      */
-    constructor({ text, type }) {
+
+    constructor({ text, style='button__classic', type='button' }) {
+
         super();
 
-        this.el.textContent = text;
         this.el.classList.toggle('button');
-        if (type) {
-            this.el.type = type;
-        }
+        this.el.innerHTML = template({
+            text:text,
+            type:type,
+            style:style
+        });
 
     }
 }

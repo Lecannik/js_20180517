@@ -1,12 +1,6 @@
-@import "blocks/button/button";
-@import "blocks/input/input";
-@import "blocks/list/list";
-@import "blocks/messages/message";
-@import "blocks/textarea/textarea";
+@import "blocks/button/button.css";
+@import "blocks/input/input.css";
+@import "blocks/list/list.css";
+@import "blocks/messages/messages.css";
+@import "blocks/textarea/textarea.css";
 @import "blocks/reset";
-
-
-message__item {
-  color: #3D9DF3;
-
-}

@@ -1,34 +1,24 @@
-import Button from './blocks/button/button';
-import Input from './blocks/input/input';
-import List from './blocks/list/list';
-import Textarea from './blocks/textarea/textarea';
-import Message from './blocks/messages/messages';
+import Router from './modules/router';
+
+import LoginView from './views/login/login';
+import SignupView from './views/signup/signup';
 
 window.addEventListener('DOMContentLoaded', function () {
+    let router = new Router();
 
-    let button = new Button({
-        text: 'Тестовая кнопка'
+    let loginView = new LoginView({
+        el: document.querySelector('.view-container.js-login')
     });
 
-    let input = new Input({
-        placeholder: 'Тестовый инпут'
+    let signupView = new SignupView({
+        el: document.querySelector('.view-container.js-signup')
     });
 
-    let list = new List({
-        list: ['первый', 'второй', 'третий']
-    });
+    router
+        .route('login', loginView)
+        .route('signup', signupView)
+        .route('chat', loginView)
+        .route('users', loginView);
 
-    let textarea = new Textarea({
-        placeholder: 'Введите текст'
-    });
-
-    let message = new Message({
-        message: 'Какое-то сообщение'
-    });
-
-    button.append(document.body);
-    input.append(document.body);
-    textarea.append(document.body);
-    list.append(document.body);
-    message.append(document.body);
+    router.start();
 });

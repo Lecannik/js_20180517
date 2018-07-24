@@ -38,4 +38,16 @@ export default class LoginView extends View {
             .addBlock('submit', this.button);
     }
 
+
+    /**
+     * Расположение view по центру
+     * @param element - имя элемента
+     */
+    formOnCenter(element){
+        let form = document.querySelector(element);
+        console.log(form);
+    }
+
+
+
 }

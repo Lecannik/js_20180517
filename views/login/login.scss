@@ -1,8 +1,26 @@
 .login-view {
-  width: 20%;
-  height: 500px;
+  position: absolute;
+  width: 200px;
+  height: 300px;
   border: 1px solid grey;
   margin: 10px;
   display: inline-block;
   vertical-align: top;
+  .login-view__to-signup{
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 16px;
+    color: #fff;
+    border: none;
+    background-color: #0078e7;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 14px;
+    transition: background-color .35s ease-in-out;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+    margin: 3px;
+
+  }
 }

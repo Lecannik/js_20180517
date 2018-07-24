@@ -1,3 +1,5 @@
+
+
 export default class View {
 
     constructor({ el }) {
@@ -21,5 +23,7 @@ export default class View {
         this.el.querySelector(`.${this.bemName}__${name}`).appendChild(block.el);
         return this;
     }
+
+
 
 }

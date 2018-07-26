@@ -59,4 +59,15 @@ export default class SignupView extends View {
         });
     }
 
+    formOnCenter(element){
+        let form = document.querySelector(element);
+        let widthForm = document.documentElement.clientWidth/2 - 101;
+        let heightForm = document.documentElement.clientHeight/2 - 151;
+        form.style.left = widthForm + "px" ;
+        form.style.top = heightForm + "px" ;
+        console.log(form.style.width);
+        let scrollWidth = form.clientWidth;
+        console.log(scrollWidth);
+    }
+
 }

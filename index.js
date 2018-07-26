@@ -10,9 +10,13 @@ window.addEventListener('DOMContentLoaded', function () {
         el: document.querySelector('.view-container.js-login')
     });
 
+    loginView.formOnCenter('.login-view');
+
     let signupView = new SignupView({
         el: document.querySelector('.view-container.js-signup')
     });
+
+    signupView.formOnCenter('.signup-view');
 
     router
         .route('login', loginView)
